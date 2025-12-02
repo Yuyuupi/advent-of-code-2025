@@ -6,12 +6,12 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static int dial = 50;
-    private static int counter = 0;
-    private static int counter2 = 0;
+    private int dial = 50;
+    private int counter = 0;
+    private int counter2 = 0;
 
-    static void main() {
-        File input = new File("input.txt");
+    void main() {
+        File input = new File("input-day-1.txt");
 
         try(Scanner scanner = new Scanner(input)) {
             while (scanner.hasNextLine()) {
@@ -28,7 +28,7 @@ public class Main {
     }
 
 
-    private static void rotateDial(String direction) {
+    private void rotateDial(String direction) {
         if (direction.startsWith("R")){
             for (int i = 0; i < Integer.parseInt(direction.substring(1)); i++) {
                 if (dial == 99) {
